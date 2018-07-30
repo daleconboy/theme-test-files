@@ -1,0 +1,78 @@
+/**
+ * Block comment
+.*/
+
+$retina-dpi:144 !default;
+
+@mixin my-mixin ($basepath, $foo, $bar) {
+  @if $foo != null and $basepath != null and $bar != null {
+    background-image:url($basepath + $foo + '.' + $bar);
+    @include hidpi() {
+      background-image:url($basepath + $foo + '.' + $bar);
+    }
+    background-repeat:no-repeat;
+  }
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-size:100%;
+  font-family:'Inconsolata', 'Courier', 'Courier New', monospace;
+  line-height:1.75;
+}
+
+h1, h2, h3, h4, h5, p {
+  margin-top:0;
+}
+
+h1, h2, h3, h4 {
+  font-family:'Special Elite', Helvetica, Arial, sans-serif;
+  font-weight:400;
+  line-height:1.35;
+}
+
+@include breakpoint('largewide') {
+  .section {
+    position:relative;
+    z-index:1;
+
+    .section-content {
+      width:980px; //1100 total
+      padding-left:60px;
+      padding-right:60px;
+    }
+
+    &.hero {
+      height:auto;
+      background-size:100% auto;
+      padding-bottom:(1190/1440) * 100%;
+      background-image:url('/foo/bar/pizza.png');
+      background-image:linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+
+      .section-content {
+        padding:0;
+        position:absolute;
+        z-index:1;
+        left:0;
+        right:0;
+        width:auto;
+        height:38%;
+        margin:0;
+
+        .logo-wrapper {
+          position:relative;
+          z-index:1;
+          top:50%;
+          transform:translateY(-50%);
+
+          .logo {
+            margin-top:0px;
+          }
+        }
+      }
+    }
+  }
+}

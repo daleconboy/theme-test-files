@@ -1,0 +1,56 @@
+{
+  "foo": "bar",
+  "baz": 1203,
+  "bam": [
+    "foo",
+    {
+      "bar:": "baz"
+    }
+  ],
+  "bad": null,
+  "goingDeep": {
+    "foo": "bar",
+    "level2": {
+      "foo": "bar",
+      "level3": {
+        "foo": "bar",
+        "level4": {
+          "foo": "bar",
+          "level5": {
+            "foo": "bar",
+            "level6": {
+              "foo": "bar",
+              "level7": {
+                "foo": "bar",
+                "level8": {
+                  "foo": "bar",
+                  "level9": {
+                    "foo": "bar",
+                    "level10": {
+                      "foo": "bar",
+                      "level11": {
+                        "foo": "bar",
+                        "level12": {
+                          "foo": "bar",
+                          "level13": {
+                            "foo": "bar",
+                            "level14": {
+                              "foo": "bar",
+                              "level15": {
+                                "foo": "bar"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
